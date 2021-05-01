@@ -13,7 +13,6 @@ exports.CinScore = class extends Generic {
     if (typeof data !== 'string') {
       throw new TypeError('data is not a string')
     }
-
     return [
       {
         ips_maliciosas: data

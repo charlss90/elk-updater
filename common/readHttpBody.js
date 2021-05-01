@@ -9,7 +9,7 @@ exports.readHttpBody = function readHttpBody(res) {
   try {
     content = JSON.parse(res.body)
   } catch (ex) {
-    console.warn('cannot to convert body in json')
+    // console.warn('cannot to convert body in json')
   }
 
   return content

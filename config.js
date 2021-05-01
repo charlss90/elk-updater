@@ -1,10 +1,17 @@
 module.exports = {
-  elasticUrl: 'http://localhost:9200',
+  elasticUrl: 'https://elastic:123456@192.168.222.128:9200',
   repositories: [
     {
       indexConfig: {
         name: 'microarrays',
         id: 'maliciousips',
+        mappings: {
+          properties: {
+            ips_maliciosas: {
+              type: 'ip',
+            },
+          },
+        },
       },
       name: 'CinScore ci-badguys',
       url: 'http://cinsscore.com/list/ci-badguys.txt',
